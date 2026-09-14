@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { copy, GITHUB_URL, type Lang } from './i18n'
+import { copy, DOCS_URL, GITHUB_URL, type Lang } from './i18n'
 import { CloudMotif, CornerFrame, GoldDivider } from './ornaments'
 import heroArt from './assets/hero-landscape.png'
 import sealArt from './assets/dragon-seal.png'
@@ -121,6 +121,9 @@ export default function App() {
           <a href="#revival" onClick={closeMenu}>
             {t.nav.revival}
           </a>
+          <a href={DOCS_URL} onClick={closeMenu}>
+            {t.nav.docs}
+          </a>
           <button className="lang-toggle" type="button" onClick={toggleLang}>
             {lang === 'zh' ? 'EN' : '中'}
           </button>
@@ -147,11 +150,11 @@ export default function App() {
             <p className="hero__en">{t.hero.english}</p>
             <p className="hero__lead">{t.hero.lead}</p>
             <div className="hero__actions">
-              <a className="btn btn--gold" href={GITHUB_URL} target="_blank" rel="noreferrer">
-                {t.hero.ctaSource}
+              <a className="btn btn--gold" href={DOCS_URL}>
+                {t.hero.ctaDocs}
               </a>
-              <a className="btn btn--ghost" href="#chronicle">
-                {t.hero.ctaScroll}
+              <a className="btn btn--ghost" href={GITHUB_URL} target="_blank" rel="noreferrer">
+                {t.hero.ctaSource}
               </a>
             </div>
           </div>
@@ -318,7 +321,11 @@ export default function App() {
           </div>
         </div>
         <p className="footer__legal">{t.footer.legal}</p>
-        <p className="footer__copy">{t.footer.copy}</p>
+        <p className="footer__copy">
+          {t.footer.copy}
+          {' · '}
+          <a href={DOCS_URL}>{t.nav.docs}</a>
+        </p>
       </footer>
     </>
   )

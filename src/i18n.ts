@@ -1,6 +1,7 @@
 export type Lang = 'zh' | 'en'
 
 export const GITHUB_URL = 'https://github.com/openfod'
+export const DOCS_URL = '/docs/'
 
 export const copy = {
   zh: {
@@ -11,6 +12,7 @@ export const copy = {
       systems: '玩法',
       realms: '三分',
       revival: '开源',
+      docs: '文档',
       source: '源码',
     },
     hero: {
@@ -20,6 +22,7 @@ export const copy = {
       english: 'Open-source Fate of the Dragon',
       lead: '汉室倾颓，天下三分。我们以现代引擎重开这座城池——内政治国、武将招揽、野战攻城，让第一款登上 E3 的中国游戏重新可玩、可改、可传。',
       ctaSource: '查阅源码',
+      ctaDocs: '查阅文档',
       ctaScroll: '进入乱世',
       scroll: '卷轴向下',
       side: '天下大势  分久必合',
@@ -146,6 +149,7 @@ export const copy = {
       systems: 'Systems',
       realms: 'Three Realms',
       revival: 'Open Source',
+      docs: 'Docs',
       source: 'Source',
     },
     hero: {
@@ -155,6 +159,7 @@ export const copy = {
       english: 'Open-source Fate of the Dragon',
       lead: 'After the Han collapsed, the realm split in three. OpenFoD recasts the 2001 Chinese RTS classic for modern machines — city governance, officer loyalty, field battles and sieges — so the first Chinese game ever shown at E3 can be played, forked, and passed on.',
       ctaSource: 'View source',
+      ctaDocs: 'Read the docs',
       ctaScroll: 'Enter the realm',
       scroll: 'Unroll the scroll',
       side: 'What long divides must unite',

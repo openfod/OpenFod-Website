@@ -1,25 +1,14 @@
-name: Deploy GitHub Pages
+name: CI
 
 on:
   push:
-    branches: [main]
-  repository_dispatch:
-    types: [docs-updated]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+    branches: [develop]
+  pull_request:
+    branches: [main, develop]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: github-pages
     steps:
       - name: Checkout website
         uses: actions/checkout@v4
@@ -28,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: openfod/OpenFod-Docs
-          ref: main
+          ref: ${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}
           path: OpenFod-Docs
 
       - uses: actions/setup-node@v4
@@ -45,10 +34,6 @@ jobs:
 
       - name: Build documentation
         working-directory: OpenFod-Docs
-        env:
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_APIKEY: ${{ secrets.LLM_APIKEY }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: |
           python -m pip install -r requirements.txt
           make html
@@ -58,20 +43,7 @@ jobs:
           mkdir -p dist/docs
           cp -a OpenFod-Docs/build/html/. dist/docs/
 
-      - name: Add SPA fallback
-        run: cp dist/index.html dist/404.html
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
+          name: website-with-docs
           path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
