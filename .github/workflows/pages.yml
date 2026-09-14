@@ -30,6 +30,7 @@ jobs:
           repository: openfod/OpenFod-Docs
           ref: main
           path: OpenFod-Docs
+          token: ${{ secrets.DOCS_CHECKOUT_TOKEN || github.token }}
 
       - uses: actions/setup-node@v4
         with:

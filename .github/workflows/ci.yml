@@ -19,6 +19,7 @@ jobs:
           repository: openfod/OpenFod-Docs
           ref: ${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}
           path: OpenFod-Docs
+          token: ${{ secrets.DOCS_CHECKOUT_TOKEN || github.token }}
 
       - uses: actions/setup-node@v4
         with:
