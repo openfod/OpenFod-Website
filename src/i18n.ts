@@ -1,6 +1,6 @@
 export type Lang = 'zh' | 'en'
 
-export const GITHUB_URL = 'https://github.com/openfod'
+export const GITHUB_URL = 'https://github.com/openfod/OpenFoD-Godot'
 export const DOCS_URL = '/docs/'
 
 export const copy = {
@@ -20,7 +20,7 @@ export const copy = {
       title: 'OpenFoD',
       chinese: '开源傲世三国',
       english: 'Open-source Fate of the Dragon',
-      lead: '汉室倾颓，天下三分。我们以现代引擎重开这座城池——内政治国、武将招揽、野战攻城，让第一款登上 E3 的中国游戏重新可玩、可改、可传。',
+      lead: '汉室倾颓，天下三分。我们用 Godot 引擎重开这座城池——内政治国、武将招揽、野战攻城，让第一款登上 E3 的中国游戏重新可玩、可改、可传。',
       ctaSource: '查阅源码',
       ctaDocs: '查阅文档',
       ctaScroll: '进入乱世',
@@ -38,7 +38,7 @@ export const copy = {
       title: '一款被世界看见的国产 RTS',
       p1: '《傲世三国》（Fate of the Dragon）由目标软件奥世工作室制作，2001 年发行。它不是红警式的纯兵线对冲，也不走三国志的回合棋盘——它把即时战略与经营模拟缝进同一座城池。',
       p2: '玩家择魏、蜀、吴之一，在城内安排农桑、税率、民心、祭祀与翰林科研；出城则是山川关隘上的实时交锋。金钱来自税收，军队靠粮食与酒水维系，攻破城门之后还有巷战。系统繁复，正是三国的气味。',
-      p3: '它是第一款在 E3 正式展出的中国游戏，远渡重洋由 Eidos 以 Fate of the Dragon 之名发行。二十余年后，原作受困于旧系统与兼容性。OpenFoD 要做的，是把这座城重新点亮。',
+      p3: '它是第一款在 E3 正式展出的中国游戏，远渡重洋由 Eidos 以 Fate of the Dragon 之名发行。二十余年后，原作受困于旧系统与兼容性。OpenFoD 用 Godot 引擎重铸《傲世三国》，要把这座城重新点亮。',
       quote: '滚滚长江东逝水，浪花淘尽英雄。',
       quoteBy: '《临江仙》· 杨慎',
     },
@@ -110,11 +110,11 @@ export const copy = {
     revival: {
       kicker: '开源',
       title: '让经典重新可玩',
-      lead: 'OpenFoD 不是逆向发行，也不是怀旧滤镜。它是一次从引擎层开始的重铸：在现代系统上运行，被社区阅读、修改与传承。',
+      lead: 'OpenFoD 不是逆向发行，也不是怀旧滤镜。它用 Godot 引擎从底层重铸《傲世三国》：在现代系统上运行，被社区阅读、修改与传承。',
       goals: [
         {
           title: '现代可运行',
-          body: '面向 Windows、Linux 与 macOS，摆脱旧日兼容补丁与分辨率枷锁。',
+          body: 'Godot 客户端面向 Windows、Linux 与 macOS，摆脱旧日兼容补丁与分辨率枷锁。',
         },
         {
           title: '系统不简化',
@@ -129,9 +129,9 @@ export const copy = {
           body: '不附带原作商业数据。拥有正版资源的玩家与纯社区内容，将走不同的合法路径。',
         },
       ],
-      ctaTitle: '帐下正缺人',
-      ctaBody: '无论你写 C++ 还是画城砖，无论你能复原一架投石车还是校对一条史料——乱世需要你。',
-      ctaBtn: '前往 GitHub',
+      ctaTitle: '项目正在开发中...',
+      ctaBody: '玩法与 Godot 客户端仍在重铸，正式版本尚未发布。欢迎先查阅文档、阅读源码，关注后续进展。',
+      ctaBtn: '查阅源码',
     },
     footer: {
       mark: 'OpenFoD',
@@ -157,7 +157,7 @@ export const copy = {
       title: 'OpenFoD',
       chinese: '开源傲世三国',
       english: 'Open-source Fate of the Dragon',
-      lead: 'After the Han collapsed, the realm split in three. OpenFoD recasts the 2001 Chinese RTS classic for modern machines — city governance, officer loyalty, field battles and sieges — so the first Chinese game ever shown at E3 can be played, forked, and passed on.',
+      lead: 'After the Han collapsed, the realm split in three. OpenFoD recasts the 2001 Chinese RTS classic in the Godot engine — city governance, officer loyalty, field battles and sieges — so the first Chinese game ever shown at E3 can be played, forked, and passed on.',
       ctaSource: 'View source',
       ctaDocs: 'Read the docs',
       ctaScroll: 'Enter the realm',
@@ -175,7 +175,7 @@ export const copy = {
       title: 'The RTS that carried China to E3',
       p1: 'Fate of the Dragon (傲世三国) was built by Object Software’s Overmax studio and released in 2001. It is not a Red Alert arms race, nor a Romance of the Three Kingdoms board. It stitches real-time war to living city management.',
       p2: 'You take Wei, Shu or Wu. Inside the walls you set taxes, farms, rites and Hanlin research; beyond them, armies clash across passes and rivers. Coin comes from levies. Troops march on grain and wine. After the gates fall, street fighting begins.',
-      p3: 'It was the first Chinese game formally shown at E3, later published in the West by Eidos. Two decades on, the original strains against modern OS and resolutions. OpenFoD exists to light that city again.',
+      p3: 'It was the first Chinese game formally shown at E3, later published in the West by Eidos. Two decades on, the original strains against modern OS and resolutions. OpenFoD recasts Fate of the Dragon in the Godot engine, to light that city again.',
       quote: 'The rolling Yangtze eastward flows, its waves have washed away all heroes.',
       quoteBy: 'Yang Shen · Immortal by the River',
     },
@@ -247,11 +247,11 @@ export const copy = {
     revival: {
       kicker: 'Open Source',
       title: 'Make the classic playable again',
-      lead: 'OpenFoD is not a reverse-engineered rerelease, nor a nostalgia filter. It is a recast from the engine up: running on modern systems, readable, forkable, and kept by a community.',
+      lead: 'OpenFoD is not a reverse-engineered rerelease, nor a nostalgia filter. It recasts Fate of the Dragon from the ground up in Godot: running on modern systems, readable, forkable, and kept by a community.',
       goals: [
         {
           title: 'Runs today',
-          body: 'Windows, Linux and macOS — without the old compatibility patches and resolution ceilings.',
+          body: 'A Godot client for Windows, Linux and macOS — without the old compatibility patches and resolution ceilings.',
         },
         {
           title: 'Systems intact',
@@ -266,9 +266,9 @@ export const copy = {
           body: 'No commercial original data ships with the project. Retail assets and community content will follow separate, legitimate paths.',
         },
       ],
-      ctaTitle: 'The camp still has empty seats',
-      ctaBody: 'Whether you write engines or draw rammed-earth walls, restore a catapult or check a historical note — the chaos age needs you.',
-      ctaBtn: 'Open GitHub',
+      ctaTitle: 'The project is under development...',
+      ctaBody: 'Gameplay and the Godot client are still being recast; a public build is not ready yet. Read the docs, browse the source, and watch for what comes next.',
+      ctaBtn: 'View source',
     },
     footer: {
       mark: 'OpenFoD',
